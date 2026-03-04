@@ -1,1 +1,37 @@
-
+{
+  "manifest_version": 3,
+  "name": "TabOS Performance Governor",
+  "version": "0.1.0",
+  "description": "Tab discard, burner tabs, media silencing, reduced motion, snapshots, and DNR tracker blocking.",
+  "permissions": [
+    "tabs",
+    "tabGroups",
+    "scripting",
+    "alarms",
+    "storage",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "pageCapture",
+    "sidePanel",
+    "contextMenus"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "sw.js", "type": "module" },
+  "declarative_net_request": {
+    "rule_resources": [
+      { "id": "trackers", "enabled": true, "path": "rules/trackers.json" }
+    ]
+  },
+  "side_panel": {
+    "default_path": "sidepanel/panel.html"
+  },
+  "action": { "default_title": "TabOS" },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["content/inject.css"],
+      "js": ["content/reduceMotion.js", "content/media.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
