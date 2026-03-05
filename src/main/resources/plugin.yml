@@ -1,0 +1,15 @@
+name: SodiumPaper
+main: com.lotest.sodiumpaper.SodiumPaperPlugin
+version: 1.0.0
+api-version: 1.12
+authors: [LoTest]
+description: Server-side Paper optimizations inspired by Sodium.
+commands:
+  sodiumpaper:
+    description: Shows plugin status or reloads config.
+    usage: /sodiumpaper [status|reload]
+    aliases: [spaper, sodium]
+permissions:
+  sodiumpaper.reload:
+    description: Allows reloading SodiumPaper config.
+    default: op
