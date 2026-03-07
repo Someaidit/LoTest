@@ -1,13 +1,13 @@
 name: SodiumPaper
 main: com.lotest.sodiumpaper.SodiumPaperPlugin
-version: 1.0.0
+version: 1.1.0
 api-version: 1.12
 authors: [LoTest]
-description: Server-side Paper optimizations inspired by Sodium.
+description: PaperMC 1.12 optimization plugin with 100 lag-free feature toggles.
 commands:
   sodiumpaper:
-    description: Shows plugin status or reloads config.
-    usage: /sodiumpaper [status|reload]
+    description: Shows plugin status, features, or reloads config.
+    usage: /sodiumpaper [status|features [page] [all|enabled|disabled]|reload]
     aliases: [spaper, sodium]
 permissions:
   sodiumpaper.reload:

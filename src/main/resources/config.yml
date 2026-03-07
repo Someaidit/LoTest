@@ -1,11 +1,36 @@
 optimizations:
   tick-period: 20
+  skip-empty-worlds: true
+  entity-scan-batch-limit: 2500
+  projectile-scan-batch-limit: 1000
 
   dynamic-ai:
-    enabled: true
     disable-distance: 56.0
     reenable-distance: 40.0
 
   item-merge:
-    enabled: true
     radius: 2.0
+    min-amount: 1
+
+limits:
+  animals: 12
+  monsters: 45
+
+spawn-intervals:
+  animals: 600
+  monsters: 2
+
+world:
+  keep-spawn-loaded: false
+  autosave: true
+
+gamerules:
+  random-tick-speed: 2
+  max-entity-cramming: 18
+
+cleanup:
+  arrows-max-age-ticks: 1200
+  exp-orb-max-age-ticks: 600
+
+# 100 feature toggles are auto-created in this section at first startup.
+features: {}
