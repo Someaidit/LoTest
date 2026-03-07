@@ -1,14 +1,20 @@
 # SodiumPaper (PaperMC 1.12.2)
 
-This repository now includes a **PaperMC 1.12.2 plugin** that brings a server-side optimization profile inspired by Sodium's "reduce overhead" philosophy.
+SodiumPaper is a Paper 1.12.2 optimization plugin focused on **lag-free, low-risk server tuning**.
 
-## Important note
+## What's included
 
-Sodium is a **client-side rendering mod**, so it cannot be perfectly recreated as a server plugin. This plugin targets what can be optimized server-side:
-
-- Dynamic monster AI throttling based on player distance.
-- Aggressive nearby item stack merging.
-- Runtime status + reload command.
+- 100 built-in feature toggles (auto-generated in `config.yml` on first run).
+- Runtime optimization loop for:
+  - Dynamic monster AI throttling.
+  - Nearby item stack merging.
+  - Arrow / XP orb cleanup.
+  - Spawn cap / spawn interval tuning.
+  - Gamerule tuning (`randomTickSpeed`, `maxEntityCramming`).
+- Commands:
+  - `/sodiumpaper status`
+  - `/sodiumpaper features [page] [all|enabled|disabled]`
+  - `/sodiumpaper reload`
 
 ## Build
 
@@ -16,13 +22,4 @@ Sodium is a **client-side rendering mod**, so it cannot be perfectly recreated a
 mvn clean package
 ```
 
-The output jar will be in `target/sodiumpaper-1.0.0.jar`.
-
-## Commands
-
-- `/sodiumpaper status` - show current optimization stats.
-- `/sodiumpaper reload` - reload config (`sodiumpaper.reload`).
-
-## Config
-
-See `src/main/resources/config.yml` for settings.
+The output JAR is placed in `target/sodiumpaper-1.1.0.jar`.
