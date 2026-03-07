@@ -1,14 +1,6 @@
-# SodiumPaper (PaperMC 1.12.2)
+# Useless100 (PaperMC Plugin)
 
-This repository now includes a **PaperMC 1.12.2 plugin** that brings a server-side optimization profile inspired by Sodium's "reduce overhead" philosophy.
-
-## Important note
-
-Sodium is a **client-side rendering mod**, so it cannot be perfectly recreated as a server plugin. This plugin targets what can be optimized server-side:
-
-- Dynamic monster AI throttling based on player distance.
-- Aggressive nearby item stack merging.
-- Runtime status + reload command.
+A Maven-based Minecraft (Paper/Spigot API) plugin that includes **100 useless features**, with **one Java file per feature**.
 
 ## Build
 
@@ -16,13 +8,12 @@ Sodium is a **client-side rendering mod**, so it cannot be perfectly recreated a
 mvn clean package
 ```
 
-The output jar will be in `target/sodiumpaper-1.0.0.jar`.
+Output jar:
 
-## Commands
+- `target/useless100-1.0.0.jar`
 
-- `/sodiumpaper status` - show current optimization stats.
-- `/sodiumpaper reload` - reload config (`sodiumpaper.reload`).
+## Command
 
-## Config
-
-See `src/main/resources/config.yml` for settings.
+- `/useless` - shows summary
+- `/useless list` - lists all 100 features
+- `/useless <1-100>` - shows a specific useless feature message

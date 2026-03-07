@@ -1,15 +1,11 @@
-name: SodiumPaper
-main: com.lotest.sodiumpaper.SodiumPaperPlugin
+name: Useless100
+main: com.lotest.useless100.Useless100Plugin
 version: 1.0.0
 api-version: 1.12
 authors: [LoTest]
-description: Server-side Paper optimizations inspired by Sodium.
+description: A Paper plugin that contains 100 completely useless features.
 commands:
-  sodiumpaper:
-    description: Shows plugin status or reloads config.
-    usage: /sodiumpaper [status|reload]
-    aliases: [spaper, sodium]
-permissions:
-  sodiumpaper.reload:
-    description: Allows reloading SodiumPaper config.
-    default: op
+  useless:
+    description: Show or use one of the 100 useless features.
+    usage: /useless [list|1-100]
+    aliases: [u100]
