@@ -26,3 +26,7 @@ The output jar will be in `target/sodiumpaper-1.0.0.jar`.
 ## Config
 
 See `src/main/resources/config.yml` for settings.
+
+## Web C++ Prototype
+
+A new `webcraft_cpp/` folder provides a C++ voxel simulation scaffold that can be compiled to WebAssembly with Emscripten as a first step toward a browser-based Minecraft-style implementation.
